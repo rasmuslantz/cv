@@ -1,0 +1,8 @@
+{
+  "name": "Rasmus Lantz Portfolio",
+  "short_name": "Rasmus Lantz",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f3f1eb",
+  "theme_color": "#f3f1eb"
+}
