@@ -2,8 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://rasmuslantz.github.io/cv/</loc></url>
   <url><loc>https://rasmuslantz.github.io/cv/projects.html</loc></url>
+  <url><loc>https://rasmuslantz.github.io/cv/engineering.html</loc></url>
+  <url><loc>https://rasmuslantz.github.io/cv/results.html</loc></url>
   <url><loc>https://rasmuslantz.github.io/cv/experience.html</loc></url>
   <url><loc>https://rasmuslantz.github.io/cv/case-studies.html</loc></url>
   <url><loc>https://rasmuslantz.github.io/cv/automation.html</loc></url>
   <url><loc>https://rasmuslantz.github.io/cv/now.html</loc></url>
+  <url><loc>https://rasmuslantz.github.io/cv/contact.html</loc></url>
 </urlset>
