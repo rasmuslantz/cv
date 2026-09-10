@@ -1,10 +1,10 @@
 # Engineering Case Studies
 
-A closer look at a few projects, focused on the engineering problems and decisions rather than only the feature list.
+A closer look at selected products and systems, focused on engineering problems and decisions rather than only feature lists.
 
 ## DriveSplit
 
-**Problem:** splitting fuel costs sounds simple until route selection, vehicle consumption, fuel prices, passenger count, localization and live trip state all have to agree on the same answer.
+**Problem:** splitting fuel costs sounds simple until route selection, vehicle consumption, fuel prices, passenger count, localization and live trip state all need to produce the same answer.
 
 **What I built**
 
@@ -18,13 +18,9 @@ A closer look at a few projects, focused on the engineering problems and decisio
 - localized numeric input and decimal handling
 - unit tests around calculations, invalid states and edge cases
 
-**Engineering decisions**
+**Engineering approach:** keep calculation logic separate from presentation, make route choice explicit, distinguish persistent entities from transient live-session state, and treat unsupported journeys as invalid product states instead of silently accepting them.
 
-The calculation layer is kept separate from presentation so cost logic can be tested without the UI. Route choice is explicit rather than hidden behind a single automatic result. Invalid transport paths are treated as invalid product states instead of being silently accepted. Persistent entities such as vehicles and trips are modeled independently from transient route and live-session state.
-
-**What it demonstrates:** native product engineering, MapKit, state modeling, persistence, testing, UX decisions and shipping an end-to-end consumer app.
-
-[Product site](https://drivesplit.pages.dev)
+[Product site](https://drivesplit.pages.dev) · [Visual case study](case-studies.html#drivesplit)
 
 ---
 
@@ -34,8 +30,8 @@ The calculation layer is kept separate from presentation so cost logic can be te
 
 **What I built**
 
-- macOS desktop application with React and TypeScript
-- Tauri/Rust desktop boundary
+- React and TypeScript macOS desktop interface
+- Tauri/Rust native application boundary
 - Python-based device bridge
 - device discovery and connection state
 - iOS-version-aware location simulation paths
@@ -44,83 +40,90 @@ The calculation layer is kept separate from presentation so cost logic can be te
 - installation-bound entitlement handling
 - macOS Keychain integration
 - signed and notarized release workflows
-- updater trust and release attestation checks
-- privacy-oriented redaction of technical output
+- updater trust and release-attestation checks
+- privacy-oriented diagnostic redaction
 
-**Engineering decisions**
+**Engineering approach:** model device compatibility and trust as explicit states, keep native-sensitive functionality behind a small boundary, and treat signing, notarization and updater trust as part of the product rather than release chores.
 
-PinShift deliberately does not try to hide or bypass Apple's trust boundaries. Device ownership, Trust, Developer Mode and signing requirements are treated as product constraints. Diagnostic output is useful enough for debugging while avoiding unnecessary exposure of device identifiers and private location data.
+[Product site](https://pinshift.pages.dev) · [Public architecture](https://github.com/rasmuslantz/PinShift-Support/blob/main/ARCHITECTURE.md)
 
-**What it demonstrates:** desktop architecture, multi-language integration, native platform constraints, release engineering, security boundaries and developer tooling.
+---
 
-[Product site](https://pinshift.pages.dev) · [Public support repository](https://github.com/rasmuslantz/PinShift-Support)
+## Illa del Bosc Pàdel
+
+**Problem:** a real community booking system needs more than a calendar. Availability, resident access, booking limits, admin closures, open matches and community content all need a consistent source of truth.
+
+**Architecture**
+
+- Expo + React Native
+- TypeScript
+- Expo Router
+- Supabase Auth
+- Postgres
+- Row Level Security
+- TanStack Query
+- React Hook Form + Zod
+- multilingual foundation for Catalan, Spanish and English
+- migration-driven backend
+
+**Product scope**
+
+- live court availability
+- 30, 60 and 90-minute reservations
+- booking creation and cancellation
+- open matches / looking-for-players flows
+- invite-only resident onboarding
+- resident rules, notices and schedules
+- admin closures, invite codes, content and booking-policy controls
+
+**Engineering approach:** enforce access and booking rules close to the data layer, keep resident and admin functionality role-aware, and make the same product work across iOS, Android and web.
+
+[Visual case study](case-studies.html#padel)
 
 ---
 
 ## Automation systems
 
-**Problem:** repetitive operational work is often automated too early, producing noisy workflows that run constantly without checking whether the underlying state actually changed.
+**Problem:** scheduled workflows often create noise because they act every time they run, even when the underlying state did not change.
 
-**How I approach it**
+**How I approach automation**
 
-- use n8n as an orchestration layer where it fits
-- connect services through APIs and webhooks
-- normalize data before downstream actions
-- separate trigger, transformation, validation and side effects
-- make workflows idempotent where possible
-- only create commits, messages or updates when there is a meaningful change
-- keep secrets and environment-specific values outside workflow logic
-- add explicit error paths instead of silently dropping failed actions
+```text
+Trigger → Normalize → Validate → Decide → Act → Trace
+```
 
-**Typical use cases**
+Typical work includes:
 
-- GitHub and repository automation
-- change-aware backups
-- AI-assisted processing pipelines
-- ecommerce operations
-- document and structured-data workflows
-- webhook-driven internal tools
+- n8n orchestration
+- REST APIs and webhooks
+- structured JSON transformation
+- change detection
+- idempotent actions
+- explicit failure branches
+- AI-assisted processing with validation
+- ecommerce and support operations
+- repository and GitHub workflows
 
-**What it demonstrates:** process design, integration thinking, APIs, structured data, automation reliability and AI-assisted workflows.
+The goal is to automate meaningful state transitions, not simply to make workflows run frequently.
 
----
-
-## Casa Puffy Marketing
-
-**Problem:** ecommerce marketing tooling needs more than campaign screens. Contact ingestion, consent, segmentation, events, webhooks, email infrastructure and auditability all need to agree on the same customer state.
-
-**Architecture explored**
-
-- Next.js and TypeScript application layer
-- Supabase and PostgreSQL data model
-- Shopify webhook ingestion
-- event and contact foundations
-- segmentation primitives
-- email infrastructure
-- admin authentication
-- consent-aware data handling
-- audit logging
-
-**What it demonstrates:** product architecture, ecommerce integration, backend modeling, event-driven systems and operational software.
+[Automation page](automation.html)
 
 ---
 
-## WalkMates
+## Neon Swipe
 
-**Problem:** software testing concepts are easier to understand when the system under test has realistic boundaries rather than toy functions.
+**Problem:** deleting photos should feel quick without making destructive actions feel unsafe.
 
-**What the project covers**
+The product reduces the interaction to one item and one decision at a time, while keeping progress, undo and recovery visible.
 
-- specification-based testing
-- equivalence partitioning and boundary-value analysis
-- structural coverage
-- mutation testing with PIT
-- mocks and test seams
-- testing AI-assisted behavior
-- CI evidence through GitHub Actions
+Work included:
 
-**Stack:** Java 21, Spring Boot, Maven, H2, JUnit 5, Mockito, AssertJ, JaCoCo and PIT.
+- swipe-first review flow
+- media-type filtering
+- queue and progress state
+- resumable sessions
+- undo and recovery behavior
+- bilingual public product website
+- lightweight responsive frontend
 
-**What it demonstrates:** testing methodology, Java/Spring engineering, CI and deliberately testable architecture.
-
-[View repository](https://github.com/rasmuslantz/walkmates-test)
+[Public repository](https://github.com/rasmuslantz/NeonSwipe) · [Architecture notes](https://github.com/rasmuslantz/NeonSwipe/blob/main/ARCHITECTURE.md)
