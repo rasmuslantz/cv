@@ -1,8 +1,12 @@
 document.documentElement.classList.add('js');
 
+const navStyles = document.createElement('link');
+navStyles.rel = 'stylesheet';
+navStyles.href = 'nav.css';
+document.head.appendChild(navStyles);
+
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-// Keep navigation consistent across every static page.
 const navigation = [
   ['projects.html', 'Projects'],
   ['engineering.html', 'Engineering'],
@@ -28,7 +32,6 @@ if (navCta) {
   if (currentFile === 'contact.html') navCta.classList.add('active');
 }
 
-// Real mobile navigation instead of hiding the desktop links.
 if (navWrap) {
   const toggle = document.createElement('button');
   toggle.className = 'menu-toggle';
