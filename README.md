@@ -9,6 +9,7 @@ I build products, automation systems and developer tooling, with a strong focus 
 [![GitHub](https://img.shields.io/badge/GitHub-rasmuslantz-181717?logo=github)](https://github.com/rasmuslantz)
 [![DriveSplit](https://img.shields.io/badge/DriveSplit-iOS%20App-000000?logo=apple)](https://drivesplit.pages.dev)
 [![PinShift](https://img.shields.io/badge/PinShift-macOS%20App-000000?logo=apple)](https://pinshift.pages.dev)
+[![Projects](https://img.shields.io/badge/Selected-Projects-2ea44f?logo=github)](PROJECTS.md)
 
 </div>
 
@@ -72,6 +73,8 @@ Highlights:
 → [pinshift.pages.dev](https://pinshift.pages.dev)
 
 ## Other projects
+
+For a faster overview, see **[Selected Projects →](PROJECTS.md)**.
 
 ### Health wearable platform
 
@@ -140,7 +143,7 @@ Examples include:
 
 ### Platforms & tools
 
-`Git` · `GitHub` · `Xcode` · `VS Code` · `Cloudflare Pages / Workers` · `Shopify` · `ServiceNow`
+`Git` · `GitHub` · `Xcode` · `VS Code` · `Cloudflare Pages / Workers` · `Shopify` · `ServiceNow` · `Azure`
 
 ## How I like to build
 
@@ -161,9 +164,28 @@ I use AI extensively as part of my development workflow, but not simply as a cod
 
 That has also led me to build workflows around AI itself, especially where agents can be connected to GitHub, n8n, APIs or structured datasets instead of being used only through a chat interface.
 
-## Professional background
+## Professional experience
 
-My professional experience includes customer-facing technical work in enterprise environments, including working with **ServiceNow** for ticket and support workflows. Alongside this, I have focused heavily on building independent software and automation projects that give me hands-on exposure across product development, AI tooling and engineering operations.
+My professional background includes **ServiceNow technical consulting and development** in enterprise environments, alongside independent product and automation work.
+
+Relevant experience includes:
+
+- custom ServiceNow applications and portal/widget development
+- JavaScript-based platform work and configuration
+- integrations through REST APIs and external services
+- security assessment, remediation and platform hardening work
+- an Azure-based integration connecting ServiceNow Business Continuity workflows with SafeBreach
+- troubleshooting and support in large enterprise environments
+- Git-based development, debugging and iterative delivery in Agile/Scrum-style workflows
+
+### ServiceNow certifications
+
+- **Certified System Administrator (CSA)**
+- **Certified Application Developer (CAD)**
+- Dynamic SecOps Professional
+- Technical Sales Professional
+
+Alongside enterprise platform work, I have focused heavily on building independent software and automation products that give me hands-on exposure across native apps, web platforms, AI tooling, APIs and engineering operations.
 
 I am especially interested in roles involving:
 
