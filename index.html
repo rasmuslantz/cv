@@ -1,59 +1,201 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<!doctype html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Rasmus Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Rasmus Lantz builds native apps, automation systems and developer tools across iOS, macOS, AI and workflow automation.">
+  <meta name="theme-color" content="#f3f1eb">
+  <meta property="og:title" content="Rasmus Lantz | Software, AI & Automation">
+  <meta property="og:description" content="Product-minded developer building native apps, automation systems and developer tools.">
+  <meta property="og:type" content="website">
+  <title>Rasmus Lantz | Software, AI & Automation</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<table cellspacing="20">
-  <tr>
-    <td><img src="27rasmus.png" alt="Rasmus Profile picture"></td>
-    <td>  <h1>Rasmus Lantz</h1>
-      <p><em>Test 01 of my first <strong>website</strong>.</em></p>
-      <p>My name is rasmus lantz and i'm learning basic programming</p></td>
-  </tr>
-</table>
-  <hr>
-  <h3>Education</h3>
-  <ul>
-      <li>Fluvia</li>
-      <li>4 Cantons</li>
-  </ul>
-  <table>
-    <tr>
-      <th>Dates</th>
-      <th>Work</th>
-    </tr>
-    <tr>
-      <td>2020</td>
-      <td>Worked at lego factory</td>
-    </tr>
-    <tr>
-      <td>2021</td>
-      <td>Finished Highschool</td>
-    </tr>
-    <hr>
-  </table>
-  <h2>Skills</h2>
-  <table cellspacing="5">
-    <tr>
-        <td>Minecraft</td>
-        <td>⭐️⭐️⭐️⭐️⭐️</td>
-        <td>Valorant</td>
-        <td>⭐️⭐️</td>
-    </tr>
-    <tr>
-        <td>Pokemon</td>
-        <td>⭐️⭐️⭐️⭐️</td>
-        <td>Geometry Dash</td>
-        <td>⭐️</td>
-    </tr>
-  </table>
-  <hr>
-  <h3><em><strong><a href="hobbies.html">Hobbies</a></strong></em></h3>
-  <hr>
-  <h3><em><strong><a href="contact.html">Contact</a></strong></em></h3>
-</body>
+  <a class="skip-link" href="#main">Skip to content</a>
 
+  <header class="site-header">
+    <div class="shell nav-wrap">
+      <a class="wordmark" href="#top" aria-label="Rasmus Lantz home">RL</a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#work">Work</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#background">Background</a>
+        <a href="PROJECTS.md">Project index</a>
+      </nav>
+      <a class="nav-cta" href="https://github.com/rasmuslantz" target="_blank" rel="noreferrer">GitHub ↗</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero shell" id="top">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Software Developer · AI & Automation · iOS / macOS</p>
+        <h1>I build useful software and automate the work around it.</h1>
+        <p class="hero-intro">I like taking practical problems from rough idea to working product. That usually means writing the app, connecting the APIs, automating repetitive workflows, testing the risky parts and shipping the result.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#work">Selected work</a>
+          <a class="button button-secondary" href="CASE_STUDIES.md">Read case studies</a>
+        </div>
+      </div>
+
+      <aside class="hero-aside reveal" aria-label="Profile summary">
+        <img class="avatar" src="https://github.com/rasmuslantz.png" alt="Rasmus Lantz" width="176" height="176">
+        <div class="status"><span class="status-dot" aria-hidden="true"></span>Currently building</div>
+        <dl class="quick-facts">
+          <div><dt>Focus</dt><dd>Product engineering, AI, automation</dd></div>
+          <div><dt>Platforms</dt><dd>iOS, macOS, web, workflows</dd></div>
+          <div><dt>Languages</dt><dd>Swift, TypeScript, Python, Java</dd></div>
+          <div><dt>Approach</dt><dd>Prototype fast, harden what matters</dd></div>
+        </dl>
+      </aside>
+    </section>
+
+    <section class="marquee" aria-label="Technical areas">
+      <div class="shell marquee-inner">
+        <span>SwiftUI</span><span>MapKit</span><span>ActivityKit</span><span>React</span><span>TypeScript</span><span>Python</span><span>n8n</span><span>REST APIs</span><span>GitHub Actions</span><span>Cloudflare</span>
+      </div>
+    </section>
+
+    <section class="section shell" id="work">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Selected work</p>
+        <h2>Products first. Technology in service of the product.</h2>
+        <p>A selection of projects that show how I work across native development, automation, infrastructure and product design.</p>
+      </div>
+
+      <div class="project-grid">
+        <article class="project project-featured reveal">
+          <div class="project-topline"><span>01</span><span>Active product</span></div>
+          <div class="project-body">
+            <p class="project-kicker">Native iOS</p>
+            <h3>DriveSplit</h3>
+            <p>Route planning and real trip-cost sharing for drivers and passengers. The app combines route selection, vehicle consumption, fuel pricing, passenger splitting, persistent trip data and live journey state.</p>
+            <ul class="tags" aria-label="DriveSplit technologies"><li>Swift</li><li>SwiftUI</li><li>SwiftData</li><li>MapKit</li><li>ActivityKit</li><li>XCTest</li></ul>
+          </div>
+          <a class="project-link" href="https://drivesplit.pages.dev" target="_blank" rel="noreferrer">Visit DriveSplit ↗</a>
+        </article>
+
+        <article class="project reveal">
+          <div class="project-topline"><span>02</span><span>Developer utility</span></div>
+          <div class="project-body">
+            <p class="project-kicker">macOS · local-first</p>
+            <h3>PinShift</h3>
+            <p>A macOS utility for authorized iPhone Core Location testing. It brings together a desktop UI, native device workflows, release signing, local state and explicit safety boundaries around Apple's development tooling.</p>
+            <ul class="tags" aria-label="PinShift technologies"><li>React</li><li>TypeScript</li><li>Tauri</li><li>Rust</li><li>Python</li></ul>
+          </div>
+          <a class="project-link" href="https://pinshift.pages.dev" target="_blank" rel="noreferrer">Visit PinShift ↗</a>
+        </article>
+
+        <article class="project reveal">
+          <div class="project-topline"><span>03</span><span>Shipped app</span></div>
+          <div class="project-body">
+            <p class="project-kicker">Mobile product</p>
+            <h3>Neon Swipe</h3>
+            <p>A focused photo-cleanup product built around a simple swipe interaction, resumable sessions, progress feedback and a bilingual product website.</p>
+            <ul class="tags" aria-label="Neon Swipe technologies"><li>Mobile</li><li>Product UX</li><li>Web</li><li>EN / ES</li></ul>
+          </div>
+          <a class="project-link" href="https://github.com/rasmuslantz/NeonSwipe" target="_blank" rel="noreferrer">View project ↗</a>
+        </article>
+
+        <article class="project reveal">
+          <div class="project-topline"><span>04</span><span>Prototype</span></div>
+          <div class="project-body">
+            <p class="project-kicker">AI-assisted discovery</p>
+            <h3>Aurelia</h3>
+            <p>An experimental jewelry-discovery interface exploring product search, visual interaction and AI-assisted recommendations through a polished React frontend.</p>
+            <ul class="tags" aria-label="Aurelia technologies"><li>React</li><li>TypeScript</li><li>Vite</li><li>Framer Motion</li></ul>
+          </div>
+          <a class="project-link" href="https://github.com/rasmuslantz/Aurelia" target="_blank" rel="noreferrer">View source ↗</a>
+        </article>
+
+        <article class="project reveal">
+          <div class="project-topline"><span>05</span><span>Education · testing</span></div>
+          <div class="project-body">
+            <p class="project-kicker">Java testing system</p>
+            <h3>WalkMates</h3>
+            <p>A deliberately testable Spring Boot system used to explore specification-based testing, structural coverage, mutation testing, mocks and testing AI-assisted behavior.</p>
+            <ul class="tags" aria-label="WalkMates technologies"><li>Java 21</li><li>Spring Boot</li><li>JUnit 5</li><li>Mockito</li><li>PIT</li></ul>
+          </div>
+          <a class="project-link" href="https://github.com/rasmuslantz/walkmates-test" target="_blank" rel="noreferrer">View project ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-contrast" id="capabilities">
+      <div class="shell split">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Capabilities</p>
+          <h2>I usually work across more than one layer.</h2>
+          <p>The interesting part for me is not just writing a screen or wiring an endpoint. It is understanding how the whole product needs to behave.</p>
+        </div>
+
+        <div class="capability-list">
+          <article class="capability reveal"><span>01</span><div><h3>Native product engineering</h3><p>Swift, SwiftUI, SwiftData, MapKit, HealthKit, ActivityKit, AVFoundation and platform-native UX.</p></div></article>
+          <article class="capability reveal"><span>02</span><div><h3>Automation & integrations</h3><p>n8n, webhooks, REST APIs, structured data transformation, background workflows and service orchestration.</p></div></article>
+          <article class="capability reveal"><span>03</span><div><h3>Applied AI</h3><p>AI-assisted product features, agent workflows, prompt and output validation, structured generation and AI-supported development.</p></div></article>
+          <article class="capability reveal"><span>04</span><div><h3>Release & reliability</h3><p>GitHub Actions, testing, signed releases, notarization, migration thinking, explicit failure paths and privacy-aware logging.</p></div></article>
+          <article class="capability reveal"><span>05</span><div><h3>Web & backend</h3><p>React, Next.js, TypeScript, Supabase, PostgreSQL, Cloudflare, Shopify integrations and lightweight service architecture.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell" id="background">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Background</p>
+        <h2>Technical work shaped by real operational problems.</h2>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item reveal">
+          <div class="timeline-meta">Current</div>
+          <div><h3>Independent software & automation projects</h3><p>Building and shipping products across Apple platforms, automation, AI tooling, ecommerce operations and developer utilities.</p></div>
+        </article>
+        <article class="timeline-item reveal">
+          <div class="timeline-meta">Enterprise support</div>
+          <div><h3>Customer-facing technical environments</h3><p>Experience working with enterprise support workflows and ServiceNow, alongside hands-on software and automation work.</p></div>
+        </article>
+        <article class="timeline-item reveal">
+          <div class="timeline-meta">Education</div>
+          <div><h3>University studies in Spain and Sweden</h3><p>Studies spanning information systems, digital information management and computer science, with software testing and engineering work alongside product development.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section shell principles">
+      <div class="section-heading reveal">
+        <p class="eyebrow">How I build</p>
+        <h2>A few rules I keep coming back to.</h2>
+      </div>
+      <div class="principle-grid">
+        <article class="reveal"><strong>01</strong><h3>Automate state changes, not noise.</h3><p>Automation should reflect something meaningful that happened, not create activity for its own sake.</p></article>
+        <article class="reveal"><strong>02</strong><h3>Keep risky logic testable.</h3><p>Calculations, persistence, migrations, release paths and billing deserve explicit tests and failure handling.</p></article>
+        <article class="reveal"><strong>03</strong><h3>Prototype quickly. Harden selectively.</h3><p>Speed matters early. Reliability matters once a feature proves that it deserves to stay.</p></article>
+        <article class="reveal"><strong>04</strong><h3>Ship the whole experience.</h3><p>Product flow, code, infrastructure, release engineering and documentation are all part of the same thing.</p></article>
+      </div>
+    </section>
+
+    <section class="contact shell reveal">
+      <p class="eyebrow">Explore more</p>
+      <h2>Code is private where it should be. The engineering is still visible.</h2>
+      <p>Most active product source lives in private repositories. Public projects, product sites and technical write-ups show the architecture, decisions and problems behind the work.</p>
+      <div class="hero-actions">
+        <a class="button button-primary" href="https://github.com/rasmuslantz" target="_blank" rel="noreferrer">GitHub profile ↗</a>
+        <a class="button button-secondary" href="PROJECTS.md">All projects</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <span>Rasmus Lantz</span>
+      <span id="year"></span>
+      <span>Built without a framework.</span>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
 </html>
