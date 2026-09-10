@@ -7,11 +7,11 @@
 I build native apps, automation systems and developer tools, usually from the first rough idea through implementation, integrations, testing and release.
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-Website-174B3A?logo=githubpages&logoColor=white)](https://rasmuslantz.github.io/cv/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Rasmus%20Lantz-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rasmus-lantz)
 [![Projects](https://img.shields.io/badge/Selected-Projects-181717?logo=github)](projects.html)
-[![Experience](https://img.shields.io/badge/Professional-Experience-181717)](experience.html)
-[![Case Studies](https://img.shields.io/badge/Engineering-Case%20Studies-181717)](case-studies.html)
+[![Engineering](https://img.shields.io/badge/Engineering-Approach-181717)](engineering.html)
+[![Results](https://img.shields.io/badge/Execution-Results-181717)](results.html)
 [![Automation](https://img.shields.io/badge/n8n-Automation-181717?logo=n8n)](automation.html)
-[![Now](https://img.shields.io/badge/Current-Focus-181717)](now.html)
 
 </div>
 
@@ -26,6 +26,16 @@ A large part of my active product source stays private, so this repository acts 
 ```text
 Build first. Explain it once it works.
 ```
+
+## Selected execution
+
+- **~50K organic downloads** for BeMyV, with a peak at **Top 6 in Spain's Free Entertainment chart** without paid promotion.
+- Native iOS and macOS products taken through real distribution and release workflows.
+- Production automation around ecommerce, support and document operations.
+- Cross-platform product work across iOS, Android and web.
+- Daily enterprise IT experience with ServiceNow-driven incident and ticket workflows.
+
+[Execution & results →](results.html)
 
 ## Flagship work
 
@@ -168,7 +178,7 @@ Built a C-based command-line tool for iOS SDK developers working and debugging o
 
 ## Other work
 
-**BeMyV** · shipped iOS app  
+**BeMyV** · shipped iOS product · ~50K organic downloads · Top 6 Spain at peak  
 **Daily Frame** · paused iOS experiment  
 **Invitely** · paused iOS experiment  
 **Aurelia** · archived / abandoned earlier prototype
@@ -177,7 +187,7 @@ University coursework is intentionally kept separate from independent product wo
 
 ## Explore
 
-**[Portfolio website](https://rasmuslantz.github.io/cv/)** · **[Projects](projects.html)** · **[Experience](experience.html)** · **[Case studies](case-studies.html)** · **[Automation](automation.html)** · **[Now](now.html)**
+**[Portfolio](https://rasmuslantz.github.io/cv/)** · **[LinkedIn](https://www.linkedin.com/in/rasmus-lantz)** · **[Projects](projects.html)** · **[Engineering](engineering.html)** · **[Results](results.html)** · **[Experience](experience.html)** · **[Case studies](case-studies.html)** · **[Automation](automation.html)**
 
 <div align="center">
 
