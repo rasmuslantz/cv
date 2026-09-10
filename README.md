@@ -2,238 +2,185 @@
 
 # Rasmus Lantz
 
-### Software Developer · AI & Automation · iOS / macOS
+### AI, Automation & Integration Developer · Product Builder · iOS / macOS
 
-I build products, automation systems and developer tooling, with a strong focus on turning ideas into working software.
+I build native apps, automation systems and developer tools, usually from the first rough idea through implementation, integrations, testing and release.
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-Website-174B3A?logo=githubpages&logoColor=white)](https://rasmuslantz.github.io/cv/)
-[![Experience](https://img.shields.io/badge/Professional-Experience-181717?logo=readme)](EXPERIENCE.md)
-[![Projects](https://img.shields.io/badge/Selected-Projects-181717?logo=github)](PROJECTS.md)
-[![Case Studies](https://img.shields.io/badge/Engineering-Case%20Studies-181717?logo=readme)](CASE_STUDIES.md)
-[![Now](https://img.shields.io/badge/Current-Focus-181717)](NOW.md)
-[![DriveSplit](https://img.shields.io/badge/DriveSplit-iOS%20App-000000?logo=apple)](https://drivesplit.pages.dev)
-[![PinShift](https://img.shields.io/badge/PinShift-macOS%20App-000000?logo=apple)](https://pinshift.pages.dev)
+[![Projects](https://img.shields.io/badge/Selected-Projects-181717?logo=github)](projects.html)
+[![Experience](https://img.shields.io/badge/Professional-Experience-181717)](experience.html)
+[![Case Studies](https://img.shields.io/badge/Engineering-Case%20Studies-181717)](case-studies.html)
+[![Automation](https://img.shields.io/badge/n8n-Automation-181717?logo=n8n)](automation.html)
+[![Now](https://img.shields.io/badge/Current-Focus-181717)](now.html)
 
 </div>
 
-## About me
+## About
 
-I'm a developer interested in the intersection of **software engineering, AI and automation**. Most of my work starts with a practical problem, then grows into a product, internal tool or automated workflow that solves it.
+I'm interested in the point where **software engineering, automation and real operational problems** meet.
 
-I particularly enjoy projects where several areas meet: native applications, APIs, AI agents, workflow automation, release engineering, product design and infrastructure.
+My projects range from native iOS products and macOS developer tooling to community platforms, ecommerce systems and n8n workflows. I tend to work end-to-end: understand the process, model the state, build the interface or service, connect the APIs, test the risky logic and automate the repetitive parts.
 
-A large part of my current work lives in private repositories while products are being developed, so this profile focuses on the engineering problems, architecture and technologies behind them rather than exposing proprietary source code.
+A large part of my active product source stays private, so this repository acts as the public engineering layer around that work.
 
 ```text
 Build first. Explain it once it works.
 ```
 
-### Explore the work
-
-| | |
-|---|---|
-| **[Portfolio website](https://rasmuslantz.github.io/cv/)** | Visual overview of my work, stack and approach |
-| **[Professional experience](EXPERIENCE.md)** | Enterprise platform work, product engineering, automation and certifications |
-| **[Selected projects](PROJECTS.md)** | Fast project index with status, stack and scope |
-| **[Engineering case studies](CASE_STUDIES.md)** | Deeper architecture and implementation decisions |
-| **[Now](NOW.md)** | What I am currently building, exploring and improving |
-
-## Currently building
+## Flagship work
 
 ### DriveSplit
 
-**Native iOS route planning and trip-cost sharing app**
+**Native iOS route planning and trip-cost sharing**
 
-DriveSplit estimates the real fuel cost of a journey and splits it between passengers. It combines route planning, vehicle consumption, fuel pricing, trip history and live trip information in a polished native iPhone experience.
+DriveSplit estimates the real fuel cost of a journey and splits it between passengers. It combines route planning, vehicle consumption, fuel pricing, trip history and live trip information in a native iPhone experience.
 
-**Engineering:** Swift · SwiftUI · SwiftData · MapKit · ActivityKit · XCTest · iOS
+`Swift` `SwiftUI` `SwiftData` `MapKit` `ActivityKit` `XCTest`
 
-Highlights:
-
-- route alternatives and journey selection
-- vehicle and fuel-consumption modeling
+- route alternatives and explicit route selection
 - deterministic trip-cost calculations
-- passenger expense splitting
+- passenger splitting
+- persistent vehicles and trip history
 - GPS filtering and live-trip state
 - Live Activities
-- localized decimal handling
-- persistent trip and vehicle data
-- native light/dark UI
+- localized number handling
 
-→ [drivesplit.pages.dev](https://drivesplit.pages.dev)
+[Product site](https://drivesplit.pages.dev) · [Case study](case-studies.html#drivesplit)
 
 ### PinShift
 
-**Local-first macOS developer utility for iPhone Core Location simulation**
+**Local-first macOS developer utility for authorized iPhone Core Location testing**
 
-PinShift is a desktop application that coordinates Apple's developer-location capabilities on an authorized iPhone. The project combines a Tauri desktop frontend with Rust and a Python device bridge, while keeping strict safety boundaries around Trust, Developer Mode, signing and device ownership.
+PinShift spans a React/TypeScript desktop interface, Tauri/Rust native boundary and Python device bridge, with release and platform-safety work around physical iPhones.
 
-**Engineering:** TypeScript · React · Tauri · Rust · Python · Astro · Cloudflare · GitHub Actions
+`React` `TypeScript` `Tauri` `Rust` `Python` `GitHub Actions`
 
-Highlights:
-
-- USB device discovery and state management
+- USB device discovery and state
 - iOS-version-aware simulation paths
-- route simulation and live telemetry
-- local-first application state
-- installation-bound signed entitlements
-- macOS Keychain integration
-- release signing and notarization workflows
+- route simulation and telemetry
+- local-first state
+- Keychain-backed values
+- signing and notarization
 - updater trust and release attestation
-- CI regression and security checks
-- privacy-oriented redaction of technical output
+- privacy-aware diagnostics
 
-→ [pinshift.pages.dev](https://pinshift.pages.dev)
+[Product site](https://pinshift.pages.dev) · [Public architecture](https://github.com/rasmuslantz/PinShift-Support)
 
-## Other projects
+### Illa del Bosc Pàdel
 
-For a faster overview, see **[Selected Projects →](PROJECTS.md)**.
+**Cross-platform reservation system for a real residential community**
 
-### Health wearable platform
+A private product for residents to reserve padel courts, see live availability, manage bookings, publish open matches and access community information. A role-protected admin workspace handles closures, invites, content, schedules and booking policy.
 
-Native SwiftUI health application built around a third-party smartband SDK and Apple Health. The architecture explores HealthKit-first data storage, Bluetooth/device abstractions, explainable wellness scoring, SwiftData caching and privacy-first health-data handling.
+`Expo` `React Native` `TypeScript` `Expo Router` `Supabase` `Postgres` `RLS`
 
-`Swift` `SwiftUI` `HealthKit` `SwiftData` `Bluetooth` `XCTest`
+- iOS, Android and web from one codebase
+- invite-only resident onboarding
+- backend-enforced booking rules
+- live availability
+- open-match / looking-for-players flows
+- Catalan, Spanish and English foundations
+- admin operations without direct database editing
 
-### Daily Frame
+[Case study](case-studies.html#padel)
 
-Experimental privacy-first iOS memory application combining daily selfies, one-second video, journaling, memories, local search and offline backup/restore.
+### Neon Swipe
 
-The project became a useful engineering sandbox for actor-based storage, AVFoundation, schema migrations, atomic restores, file protection and local-first architecture.
+**Swipe-first consumer photo cleanup**
 
-`Swift` `SwiftUI` `AVFoundation` `LocalAuthentication` `XCTest`
+A focused mobile product built around one photo and one decision at a time, with progress, resumable sessions, undo and safe recovery.
 
-### Casa Puffy Marketing
+The public repository contains the bilingual product website and architecture documentation.
 
-Private internal marketing platform inspired by tools such as Klaviyo, designed around a real ecommerce environment rather than as a generic SaaS project.
+[Public repository](https://github.com/rasmuslantz/NeonSwipe)
 
-Work includes contact ingestion, segmentation foundations, event tracking, Shopify webhooks, email infrastructure, consent handling, admin authentication and audit logging.
+## Automation systems
 
-`Next.js` `TypeScript` `Supabase` `PostgreSQL` `Shopify` `Resend` `Cloudflare`
+I use **n8n** as an orchestration layer for operational workflows involving APIs, webhooks, structured data and AI-assisted steps.
 
-### AI & workflow automation
+Typical work includes:
 
-I build automation workflows that connect services, repositories, webhooks and AI agents. n8n is frequently the orchestration layer, with scripts and APIs handling transformation, validation and application-specific logic.
+- AI-assisted customer support
+- Instagram and email routing
+- ecommerce / Shopify operations
+- document and delivery-note workflows
+- GitHub and repository automation
+- structured generation and validation
+- change-aware backups
+- internal dashboards and small operational tools
 
-Examples include:
+My preferred workflow shape is:
 
-- Git / GitHub workflow automation
-- automated repository backups with change detection
-- AI-assisted development pipelines
-- webhook-driven actions
-- structured content generation and validation
-- ecommerce and operational workflows
+```text
+Trigger → Normalize → Validate → Decide → Act → Trace
+```
 
-`n8n` `REST APIs` `Webhooks` `JavaScript` `Python` `AI Agents`
+The emphasis is on idempotency, change detection, traceability and explicit failure paths rather than simply making a workflow run frequently.
 
-## Tech I work with
-
-### Application development
-
-![Swift](https://img.shields.io/badge/Swift-F05138?logo=swift&logoColor=white)
-![SwiftUI](https://img.shields.io/badge/SwiftUI-0D96F6?logo=swift&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
-![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?logo=openjdk&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)
-![Next.js](https://img.shields.io/badge/Next.js-000000?logo=nextdotjs&logoColor=white)
-
-### Apple ecosystem
-
-`iOS` · `macOS` · `SwiftData` · `MapKit` · `HealthKit` · `ActivityKit` · `AVFoundation` · `LocalAuthentication` · `Keychain`
-
-### Backend, infrastructure & delivery
-
-![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?logo=cloudflare&logoColor=white)
-![Supabase](https://img.shields.io/badge/Supabase-3FCF8E?logo=supabase&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?logo=githubactions&logoColor=white)
-![Tauri](https://img.shields.io/badge/Tauri-24C8DB?logo=tauri&logoColor=white)
-
-### Automation & AI
-
-`n8n` · `AI Agents` · `LLM-assisted development` · `REST APIs` · `Webhooks` · `Workflow orchestration` · `Structured generation` · `Automated validation`
-
-### Platforms & tools
-
-`Git` · `GitHub` · `Xcode` · `VS Code` · `Cloudflare Pages / Workers` · `Shopify` · `ServiceNow` · `Azure`
-
-## How I like to build
-
-I tend to work end-to-end rather than staying inside one layer of a project. That can mean designing the product flow, implementing the application, connecting services, writing tests, setting up CI, automating repetitive work and then shipping the result.
-
-Some recurring engineering principles in my projects:
-
-- **Automate repetitive work**, but only when the automation reflects real state changes.
-- **Keep critical logic testable**, especially calculations, persistence, migrations and release paths.
-- **Prefer explicit failure over silent corruption** for user data, billing and release workflows.
-- **Keep privacy boundaries intentional**, particularly around device identifiers, health data and local user data.
-- **Treat release engineering as part of the product**, not an afterthought.
-- **Prototype quickly, then harden what proves useful.**
-
-## AI-assisted development
-
-I use AI extensively as part of my development workflow, but not simply as a code generator. I use agents for implementation, repository analysis, test generation, code review, refactoring, documentation and repetitive engineering tasks, while keeping validation and product decisions explicit.
-
-That has also led me to build workflows around AI itself, especially where agents can be connected to GitHub, n8n, APIs or structured datasets instead of being used only through a chat interface.
+[Explore automation](automation.html)
 
 ## Professional experience
 
-My professional background includes **ServiceNow technical consulting and development** in enterprise environments, alongside independent product and automation work.
+### Casa Puffy · Co-Founder & Automation Lead
 
-Relevant experience includes:
+Automation and technical systems across support, operations, localisation, content, backend services and internal tooling for a Shopify business.
 
-- custom ServiceNow applications and portal/widget development
-- JavaScript-based platform work and configuration
-- integrations through REST APIs and external services
-- security assessment, remediation and platform hardening work
-- an Azure-based integration connecting ServiceNow Business Continuity workflows with SafeBreach
-- troubleshooting and support in large enterprise environments
-- Git-based development, debugging and iterative delivery in Agile/Scrum-style workflows
+### LLORCASA INOX · Automation & AI Consultant
 
-### ServiceNow certifications
+Process mapping and practical automation with n8n, connected services, document workflows, validation, traceability and customer-facing AI tooling.
 
-- **Certified System Administrator (CSA)**
-- **Certified Application Developer (CAD)**
-- Dynamic SecOps Professional
-- Technical Sales Professional
+### Computacenter · First Line Analyst / IT Analyst
 
-Alongside enterprise platform work, I have focused heavily on building independent software and automation products that give me hands-on exposure across native apps, web platforms, AI tooling, APIs and engineering operations.
+Enterprise IT support with daily ServiceNow use for incident/ticket handling, troubleshooting, escalation, documentation and cross-team coordination in SLA-driven workflows.
 
-I am especially interested in roles involving:
+### Keystream Holding AB · Software Developer Intern
 
-- software development
-- AI engineering / applied AI
-- business and workflow automation
-- agentic systems
-- integrations and APIs
-- developer tooling
-- product engineering
+Built a C-based command-line tool for iOS SDK developers working and debugging on macOS targets.
 
-## Education
+[Full experience](experience.html)
 
-Currently completing a university degree in **Information and Digital Documentation Management** at the University of Barcelona, alongside previous university studies in Sweden.
+## Tech
 
-My academic background complements software development with information architecture, structured data, information systems and digital information management.
+### Product development
 
-## Languages
+`Swift` · `SwiftUI` · `SwiftData` · `MapKit` · `ActivityKit` · `HealthKit` · `AVFoundation` · `React Native` · `React` · `TypeScript` · `JavaScript` · `Python` · `Java` · `C` · `Rust`
 
-- **English** · Fluent
-- **Spanish** · Native
-- **Catalan** · Fluent
-- **Swedish** · Native
+### Backend & data
 
-## What you will find on this GitHub
+`Supabase` · `PostgreSQL` · `REST APIs` · `Webhooks` · `OAuth 2.0` · `JSON` · `Shopify`
 
-Most production and active product repositories are private, but GitHub is still the main development history for many of my projects. Public repositories are used for selected projects, support infrastructure, experiments and technical documentation.
+### Automation & delivery
 
-Private activity includes application development, pull requests, release work, testing, CI, refactors and AI-assisted engineering workflows.
+`n8n` · `AI-assisted workflows` · `GitHub Actions` · `Cloudflare Pages / Workers` · `Tauri` · `macOS signing / notarization` · `Linux` · `self-hosted systems`
 
-If a project interests you, feel free to ask about the architecture, engineering decisions or the problems it solves.
+### Enterprise
+
+`ServiceNow operational use` · `ITSM workflows` · `SLA-driven support` · `documentation` · `validation` · `traceability`
+
+## How I build
+
+- **Own the full path.** UI, logic, APIs, tests, release and operations are one product.
+- **Keep risky logic testable.** Calculations, persistence, migrations and permissions should be explicit.
+- **Automate meaningful state changes.** Scheduled noise is not useful automation.
+- **Prefer useful failure.** A visible, diagnosable failure is better than silent corruption.
+- **Prototype fast, harden selectively.** Not every experiment deserves production architecture.
+- **Archive honestly.** Paused or abandoned projects stay clearly separate from active work.
+
+## Other work
+
+**BeMyV** · shipped iOS app  
+**Daily Frame** · paused iOS experiment  
+**Invitely** · paused iOS experiment  
+**Aurelia** · archived / abandoned earlier prototype
+
+University coursework is intentionally kept separate from independent product work.
+
+## Explore
+
+**[Portfolio website](https://rasmuslantz.github.io/cv/)** · **[Projects](projects.html)** · **[Experience](experience.html)** · **[Case studies](case-studies.html)** · **[Automation](automation.html)** · **[Now](now.html)**
 
 <div align="center">
 
-### Build things. Automate the boring parts. Ship the useful parts.
+### Build useful things. Automate the repetitive parts. Ship the result.
 
 </div>
