@@ -7,6 +7,7 @@
 I build products, automation systems and developer tooling, with a strong focus on turning ideas into working software.
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-Website-174B3A?logo=githubpages&logoColor=white)](https://rasmuslantz.github.io/cv/)
+[![Experience](https://img.shields.io/badge/Professional-Experience-181717?logo=readme)](EXPERIENCE.md)
 [![Projects](https://img.shields.io/badge/Selected-Projects-181717?logo=github)](PROJECTS.md)
 [![Case Studies](https://img.shields.io/badge/Engineering-Case%20Studies-181717?logo=readme)](CASE_STUDIES.md)
 [![Now](https://img.shields.io/badge/Current-Focus-181717)](NOW.md)
@@ -32,6 +33,7 @@ Build first. Explain it once it works.
 | | |
 |---|---|
 | **[Portfolio website](https://rasmuslantz.github.io/cv/)** | Visual overview of my work, stack and approach |
+| **[Professional experience](EXPERIENCE.md)** | Enterprise platform work, product engineering, automation and certifications |
 | **[Selected projects](PROJECTS.md)** | Fast project index with status, stack and scope |
 | **[Engineering case studies](CASE_STUDIES.md)** | Deeper architecture and implementation decisions |
 | **[Now](NOW.md)** | What I am currently building, exploring and improving |
