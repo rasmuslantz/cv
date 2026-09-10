@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Automation systems and n8n workflow approach by Rasmus Lantz."><title>Automation | Rasmus Lantz</title><link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"></head>
+<body class="inner-page"><div class="page-progress" aria-hidden="true"></div>
+<header class="site-header"><div class="shell nav-wrap"><a class="wordmark" href="./">RL</a><nav class="nav"><a href="./">Home</a><a href="projects.html">Projects</a><a href="experience.html">Experience</a><a href="case-studies.html">Case studies</a><a class="active" href="automation.html">Automation</a></nav><a class="nav-cta" href="https://github.com/rasmuslantz">GitHub ↗</a></div></header>
+<main>
+<section class="page-hero shell reveal"><p class="eyebrow">Automation systems</p><h1>Less clicking. More reliable state.</h1><p>I use n8n as an orchestration layer when it makes sense, but the workflow is never the goal. The goal is to remove repetitive work while keeping validation, traceability and failure handling explicit.</p></section>
+
+<section class="automation-diagram shell reveal" aria-label="Automation architecture">
+  <div class="flow-node"><span>01</span><strong>Trigger</strong><small>schedule · webhook · event</small></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-node"><span>02</span><strong>Normalize</strong><small>shape · clean · enrich</small></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-node"><span>03</span><strong>Validate</strong><small>rules · schema · permissions</small></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-node"><span>04</span><strong>Decide</strong><small>compare · route · score</small></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-node"><span>05</span><strong>Act</strong><small>API · message · commit</small></div>
+  <div class="flow-arrow">→</div>
+  <div class="flow-node"><span>06</span><strong>Trace</strong><small>log · retry · escalate</small></div>
+</section>
+
+<section class="section shell"><div class="section-heading reveal"><p class="eyebrow">What I automate</p><h2>Workflows tied to real operations.</h2></div><div class="mini-grid"><article class="reveal"><span>Support</span><h3>AI-assisted customer support</h3><p>Inbound routing, draft generation, escalation logic, tone controls and handoff patterns across email and social channels.</p></article><article class="reveal"><span>Ecommerce</span><h3>Shopify operations</h3><p>Customer and order data, webhook-driven workflows, content operations, segmentation foundations and internal dashboards.</p></article><article class="reveal"><span>Documents</span><h3>Operational document flows</h3><p>Routing, validation, record keeping and traceability around repetitive business documents and delivery-note processes.</p></article><article class="reveal"><span>Developer tooling</span><h3>GitHub & repository automation</h3><p>Change-aware backups, repository events, structured PR support, validation and actions triggered by meaningful diffs rather than fixed noise.</p></article><article class="reveal"><span>AI systems</span><h3>Structured generation</h3><p>LLM output constrained by schemas, deterministic post-processing, validation and human review where the workflow needs judgment.</p></article><article class="reveal"><span>Internal tools</span><h3>Small systems that remove friction</h3><p>Dashboards, APIs, webhook endpoints and glue code built around the actual process instead of forcing everything into one SaaS product.</p></article></div></section>
+
+<section class="section section-contrast"><div class="shell split"><div class="section-heading reveal"><p class="eyebrow">Reliability</p><h2>The boring parts are usually the important parts.</h2></div><div class="capability-list"><article class="capability reveal"><span>01</span><div><h3>Idempotency</h3><p>A retry should not create duplicate work, duplicate messages or duplicate records.</p></div></article><article class="capability reveal"><span>02</span><div><h3>Change detection</h3><p>Compare canonical state before acting so scheduled workflows do not generate meaningless activity.</p></div></article><article class="capability reveal"><span>03</span><div><h3>Explicit errors</h3><p>Failures should route somewhere visible, with enough context to understand what happened.</p></div></article><article class="capability reveal"><span>04</span><div><h3>Human checkpoints</h3><p>Automation should stop for approval when the cost of a wrong action is higher than the cost of a review.</p></div></article><article class="capability reveal"><span>05</span><div><h3>Traceability</h3><p>Inputs, decisions and outputs should be inspectable without dumping sensitive data into logs.</p></div></article></div></div></section>
+
+<section class="section shell"><div class="section-heading reveal"><p class="eyebrow">Toolbox</p><h2>Usually simple pieces, connected carefully.</h2></div><div class="stack-wall reveal"><span>n8n</span><span>REST APIs</span><span>Webhooks</span><span>OAuth 2.0</span><span>JSON</span><span>JavaScript</span><span>Python</span><span>GitHub</span><span>Shopify</span><span>Supabase</span><span>Cloudflare</span><span>AI agents</span></div></section>
+</main><footer class="site-footer"><div class="shell footer-inner"><span>Rasmus Lantz</span><span id="year"></span><a href="case-studies.html#automation">Case study →</a></div></footer><script src="script.js" defer></script></body></html>
