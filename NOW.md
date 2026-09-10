@@ -12,14 +12,23 @@ Continuing development of a native iOS trip-cost and route-planning product. Cur
 
 Maintaining and hardening a macOS developer utility for authorized iPhone Core Location testing, with particular attention to device compatibility, release trust, diagnostics and local-first behavior.
 
-## Exploring
+### Illa del Bosc Pàdel
 
-- AI agents that can operate on structured data and real workflows instead of only chat
-- reliable n8n orchestration with change detection and explicit validation
-- native Apple-platform product patterns
-- developer tooling that reduces repetitive setup and manual checking
-- privacy-conscious local software
-- practical ecommerce automation
+Building a real community reservation product across iOS, Android and web. The system combines live court availability, bookings, open matches, invite-only access, community information and role-protected admin operations.
+
+## Automating
+
+I am also spending a lot of time on operational automation with n8n, APIs, webhooks and AI-assisted workflow steps.
+
+Current themes include:
+
+- support automation
+- ecommerce operations
+- document routing and validation
+- GitHub/repository workflows
+- structured AI generation
+- change detection and idempotency
+- internal tools that remove repetitive work
 
 ## Improving
 
@@ -27,10 +36,10 @@ Maintaining and hardening a macOS developer utility for authorized iPhone Core L
 - clearer architecture boundaries between UI, state, services and persistence
 - release workflows that are reproducible and easy to audit
 - public documentation for private-source projects
-- using GitHub activity to reflect meaningful engineering changes rather than automated noise
+- GitHub activity that reflects meaningful engineering changes rather than automated noise
 
-## Working style
+## Archived / not current
 
-I prefer to build a functioning version early, learn from the real constraints, then harden the parts that prove important. I am most interested in work where product thinking, engineering and automation overlap.
+Projects such as Aurelia, Daily Frame and Invitely are not part of my active development focus. They are retained as earlier experiments or learning projects rather than presented as current products.
 
-[Back to profile](README.md) · [Projects](PROJECTS.md) · [Case studies](CASE_STUDIES.md)
+[Portfolio website](https://rasmuslantz.github.io/cv/) · [Projects](projects.html) · [Automation](automation.html)
