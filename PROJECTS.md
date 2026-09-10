@@ -6,8 +6,10 @@ A compact overview of selected products, experiments and engineering projects. M
 | --- | --- | --- | --- |
 | **DriveSplit** | Active | Native iOS / mobility | Swift, SwiftUI, SwiftData, MapKit, ActivityKit, XCTest |
 | **PinShift** | Active | macOS developer tooling | TypeScript, React, Tauri, Rust, Python, Astro, GitHub Actions |
+| **WalkMates** | Active / educational | Software testing / Java | Java 21, Spring Boot, JUnit 5, Mockito, JaCoCo, PIT |
 | **HT** | Development / experiment | Health & wearable platform | Swift, SwiftUI, HealthKit, SwiftData, wearable SDK integration |
 | **Casa Puffy Marketing** | Private internal project | Ecommerce automation | Next.js, TypeScript, Supabase, PostgreSQL, Shopify, Resend |
+| **BeMyV** | Shipped / maintenance | Consumer iOS app | Swift, iOS, StoreKit, XCTest |
 | **Daily Frame** | Paused experiment | Local-first iOS media | Swift, SwiftUI, AVFoundation, LocalAuthentication, XCTest |
 | **Invitely / Invites** | Paused experiment | Native iOS product | Swift, SwiftUI, local/remote service abstractions, QR/link sharing |
 | **Neon Swipe** | Maintenance mode | Consumer mobile product / web | HTML, CSS, JavaScript, bilingual product frontend |
@@ -26,6 +28,16 @@ A local-first desktop utility that coordinates Apple's developer-location servic
 
 Product: [pinshift.pages.dev](https://pinshift.pages.dev)
 
+Public architecture/support: [github.com/rasmuslantz/PinShift-Support](https://github.com/rasmuslantz/PinShift-Support)
+
+## WalkMates
+
+A deliberately testable Spring Boot system built for software-testing coursework. The project covers specification-based testing, structural coverage, mutation testing, mocks, CI evidence and testing AI-assisted behavior.
+
+It is designed so the domain has clean boundaries and explicit testing seams rather than only toy functions created for individual exercises.
+
+Repository: [github.com/rasmuslantz/walkmates-test](https://github.com/rasmuslantz/walkmates-test)
+
 ## HT
 
 A native health and smartband experiment centered on Apple Health as the durable data store. It explores HealthKit authorization, wearable integration, local caching, explainable wellness scoring and privacy-first health-data architecture.
@@ -33,6 +45,12 @@ A native health and smartband experiment centered on Apple Health as the durable
 ## Casa Puffy Marketing
 
 An internal marketing platform designed around a real ecommerce environment. It explores contact ingestion, Shopify event/webhook handling, consent-aware tracking, Supabase/PostgreSQL data modeling, email infrastructure, authentication and audit logging.
+
+## BeMyV
+
+A shipped native iOS entertainment product built in Swift. The project includes StoreKit monetization, application testing and the full process of taking an independent consumer app from development to release.
+
+The launch reached more than 800 organic downloads on its first day and entered the free Entertainment category rankings in both Spain and the United States. The implementation repository remains private.
 
 ## Daily Frame
 
@@ -44,7 +62,7 @@ A native iOS invitation-creation experiment with templates, themes, reveal anima
 
 ## Neon Swipe
 
-A consumer photo-cleanup concept built around one-action-at-a-time review: swipe to keep or delete, sort by media type, track progress and safely undo decisions. The public repository contains its bilingual product website.
+A consumer photo-cleanup concept built around one-action-at-a-time review: swipe to keep or delete, sort by media type, track progress and safely undo decisions. The public repository contains its bilingual product website and architecture notes.
 
 Repository: [github.com/rasmuslantz/NeonSwipe](https://github.com/rasmuslantz/NeonSwipe)
 
