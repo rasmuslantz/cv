@@ -1,5 +1,76 @@
 document.documentElement.classList.add('js');
 
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// Keep navigation consistent across every static page.
+const navigation = [
+  ['projects.html', 'Projects'],
+  ['engineering.html', 'Engineering'],
+  ['results.html', 'Results'],
+  ['experience.html', 'Experience'],
+  ['automation.html', 'Automation']
+];
+
+const currentFile = window.location.pathname.split('/').pop() || 'index.html';
+const nav = document.querySelector('.nav');
+if (nav) {
+  nav.innerHTML = navigation.map(([href, label]) => {
+    const active = currentFile === href ? ' class="active" aria-current="page"' : '';
+    return `<a href="${href}"${active}>${label}</a>`;
+  }).join('');
+}
+
+const navWrap = document.querySelector('.nav-wrap');
+const navCta = document.querySelector('.nav-cta');
+if (navCta) {
+  navCta.href = 'contact.html';
+  navCta.textContent = currentFile === 'contact.html' ? 'Contact' : 'Contact ↗';
+  if (currentFile === 'contact.html') navCta.classList.add('active');
+}
+
+// Real mobile navigation instead of hiding the desktop links.
+if (navWrap) {
+  const toggle = document.createElement('button');
+  toggle.className = 'menu-toggle';
+  toggle.type = 'button';
+  toggle.setAttribute('aria-label', 'Open navigation');
+  toggle.setAttribute('aria-expanded', 'false');
+  toggle.innerHTML = '<span></span><span></span>';
+  navWrap.insertBefore(toggle, navCta || null);
+
+  const mobileMenu = document.createElement('div');
+  mobileMenu.className = 'mobile-menu';
+  mobileMenu.setAttribute('aria-hidden', 'true');
+  mobileMenu.innerHTML = `
+    <nav aria-label="Mobile navigation">
+      <a href="./">Home <span>00</span></a>
+      ${navigation.map(([href, label], index) => `<a href="${href}">${label}<span>0${index + 1}</span></a>`).join('')}
+      <a href="contact.html">Contact <span>06</span></a>
+    </nav>
+    <div class="mobile-menu-meta">
+      <span>Rasmus Lantz</span>
+      <span>Software · AI · Automation</span>
+    </div>`;
+  document.body.appendChild(mobileMenu);
+
+  const closeMenu = () => {
+    document.body.classList.remove('menu-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-label', 'Open navigation');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+  };
+  const openMenu = () => {
+    document.body.classList.add('menu-open');
+    toggle.setAttribute('aria-expanded', 'true');
+    toggle.setAttribute('aria-label', 'Close navigation');
+    mobileMenu.setAttribute('aria-hidden', 'false');
+  };
+
+  toggle.addEventListener('click', () => document.body.classList.contains('menu-open') ? closeMenu() : openMenu());
+  mobileMenu.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+  window.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeMenu(); });
+}
+
 const year = document.querySelector('#year');
 if (year) year.textContent = new Date().getFullYear();
 
@@ -13,9 +84,7 @@ const updateProgress = () => {
 window.addEventListener('scroll', updateProgress, { passive: true });
 updateProgress();
 
-const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const revealItems = [...document.querySelectorAll('.reveal')];
-
 if (!reducedMotion && 'IntersectionObserver' in window) {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -60,9 +129,7 @@ if (!reducedMotion) {
       document.body.animate([
         { opacity: 1, transform: 'translateY(0)' },
         { opacity: 0, transform: 'translateY(5px)' }
-      ], { duration: 150, easing: 'ease', fill: 'forwards' }).finished.finally(() => {
-        window.location.href = target.href;
-      });
+      ], { duration: 150, easing: 'ease', fill: 'forwards' }).finished.finally(() => { window.location.href = target.href; });
     });
   });
 }
