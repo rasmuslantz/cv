@@ -150,7 +150,8 @@ const updateScrollEffects = () => {
   const max = document.documentElement.scrollHeight - window.innerHeight;
   const value = max > 0 ? window.scrollY / max : 0;
   if (progress) progress.style.transform = `scaleX(${Math.min(1, Math.max(0, value))})`;
-  document.documentElement.style.setProperty('--scroll-progress', value.toFixed(4));
+  document.documentElement.style.setProperty('--grid-x', `${(-16 * value).toFixed(2)}px`);
+  document.documentElement.style.setProperty('--grid-y', `${(-24 * value).toFixed(2)}px`);
   if (siteHeader) siteHeader.classList.toggle('is-scrolled', window.scrollY > 28);
   const aside = document.querySelector('.hero-aside');
   if (aside && window.scrollY < window.innerHeight) {
