@@ -6,10 +6,12 @@
 
 I build products, automation systems and developer tooling, with a strong focus on turning ideas into working software.
 
-[![GitHub](https://img.shields.io/badge/GitHub-rasmuslantz-181717?logo=github)](https://github.com/rasmuslantz)
+[![Portfolio](https://img.shields.io/badge/Portfolio-Website-174B3A?logo=githubpages&logoColor=white)](https://rasmuslantz.github.io/cv/)
+[![Projects](https://img.shields.io/badge/Selected-Projects-181717?logo=github)](PROJECTS.md)
+[![Case Studies](https://img.shields.io/badge/Engineering-Case%20Studies-181717?logo=readme)](CASE_STUDIES.md)
+[![Now](https://img.shields.io/badge/Current-Focus-181717)](NOW.md)
 [![DriveSplit](https://img.shields.io/badge/DriveSplit-iOS%20App-000000?logo=apple)](https://drivesplit.pages.dev)
 [![PinShift](https://img.shields.io/badge/PinShift-macOS%20App-000000?logo=apple)](https://pinshift.pages.dev)
-[![Projects](https://img.shields.io/badge/Selected-Projects-2ea44f?logo=github)](PROJECTS.md)
 
 </div>
 
@@ -24,6 +26,15 @@ A large part of my current work lives in private repositories while products are
 ```text
 Build first. Explain it once it works.
 ```
+
+### Explore the work
+
+| | |
+|---|---|
+| **[Portfolio website](https://rasmuslantz.github.io/cv/)** | Visual overview of my work, stack and approach |
+| **[Selected projects](PROJECTS.md)** | Fast project index with status, stack and scope |
+| **[Engineering case studies](CASE_STUDIES.md)** | Deeper architecture and implementation decisions |
+| **[Now](NOW.md)** | What I am currently building, exploring and improving |
 
 ## Currently building
 
@@ -122,6 +133,7 @@ Examples include:
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 ![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
+![Java](https://img.shields.io/badge/Java-ED8B00?logo=openjdk&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)
 ![Next.js](https://img.shields.io/badge/Next.js-000000?logo=nextdotjs&logoColor=white)
 
