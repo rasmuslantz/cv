@@ -1,120 +1,80 @@
 # Experience
 
-A technical overview of the professional and project environments I have worked in.
+A technical overview of my professional work across automation, enterprise IT, ecommerce systems and software development.
 
-## Enterprise platform engineering
+## Casa Puffy
 
-My enterprise work has included ServiceNow development, technical support, integrations and platform hardening in large-company environments.
+**Co-Founder & Automation Lead · Aug 2025 - Present**
 
-### ServiceNow
+I lead automation and technical systems across customer support, operations, localisation, content and internal tooling for a Shopify business.
 
-Areas I have worked with include:
+Work includes:
 
-- custom application development
-- portal and widget work
-- JavaScript-based platform development
-- REST API integrations
-- platform configuration and troubleshooting
-- security assessment and remediation
-- Git-based development workflows
-- iterative delivery in Agile/Scrum-style teams
+- AI-assisted support workflows for Instagram and email
+- routing, draft generation, escalation logic and brand-voice controls
+- backend services and internal dashboards
+- APIs, webhooks and structured JSON integrations
+- Shopify-connected operational tooling
+- reducing repetitive manual work across support and operations
 
-One integration connected ServiceNow Business Continuity workflows with SafeBreach through Azure-based services, combining platform logic, external APIs and enterprise security constraints.
+## LLORCASA INOX
 
-### Certifications
+**Automation & AI Consultant · Aug 2025 - Present**
 
-- **ServiceNow Certified System Administrator (CSA)**
-- **ServiceNow Certified Application Developer (CAD)**
-- Dynamic SecOps Professional
-- Technical Sales Professional
+I map operational processes and turn repetitive or unclear tasks into practical automations, primarily with n8n and connected services.
 
-## Product engineering
+Work includes:
 
-Alongside enterprise work, I build independent software products end-to-end.
+- n8n workflow design and orchestration
+- document and delivery-note workflows
+- routing and validation
+- record keeping and traceability
+- customer-facing AI chatbot implementation
+- iterative refinement as production requirements change
 
-### Native Apple platforms
+## Computacenter
 
-Projects such as DriveSplit and other iOS experiments have involved:
+**First Line Analyst / IT Analyst · Mar 2023 - Present**
 
-- Swift and SwiftUI
-- SwiftData persistence
-- MapKit and location workflows
-- ActivityKit and Live Activities
-- HealthKit and wearable-data experiments
-- AVFoundation media workflows
-- Keychain and LocalAuthentication
-- XCTest
-- product localization
-- release preparation and App Store-oriented delivery
+I work in a large enterprise IT environment using ServiceNow for incident and ticket handling, troubleshooting, escalation, documentation and cross-team coordination.
 
-### Desktop developer tooling
+The role includes:
 
-PinShift combines a React/TypeScript interface with Tauri, Rust and Python to coordinate native macOS and authorized iPhone developer workflows.
+- daily operational ServiceNow use
+- structured ITSM and SLA-driven processes
+- troubleshooting and escalation
+- formal access and governance constraints
+- knowledge-base and documentation improvements
+- identifying recurring friction and potential automation opportunities
 
-The work covers:
+My ServiceNow experience is operational and support-focused. I am also actively learning more about enterprise and agentic automation patterns around platforms such as ServiceNow.
 
-- desktop application state
-- USB-connected device state
-- multi-language boundaries
-- local-first storage
-- Keychain-backed values
-- signing and notarization
-- updater trust
-- compatibility handling
-- safe diagnostic output
+## Keystream Holding AB
 
-## Automation & AI
+**Software Developer Intern · Sep 2022 - Mar 2023**
 
-I build automation around real operational workflows rather than isolated demos.
+Built a C-based command-line tool that enabled iOS SDK developers to build and debug directly on macOS targets, reducing friction in development and testing workflows.
 
-Typical work includes:
+`C` `macOS` `iOS SDK tooling` `CLI development`
 
-- n8n orchestration
-- REST APIs and webhooks
-- data normalization and validation
-- change-aware GitHub automation
-- AI-assisted processing pipelines
-- structured generation
-- ecommerce operations
-- repository and release workflows
-- failure handling and idempotency
+## Core expertise
 
-I also use AI extensively inside the development process for repository analysis, implementation, testing, code review, refactoring and documentation, while keeping validation and product decisions explicit.
+**Automation & AI:** n8n, AI-assisted workflows, workflow orchestration, chatbot systems, support automation, escalation logic
 
-## Ecommerce & operational systems
+**Integration & data:** REST APIs, webhooks, OAuth 2.0, JSON, data transformation, Supabase, Shopify, backend services
 
-I have worked on automation and internal tooling around ecommerce and traditional business processes, including:
+**Enterprise IT:** ServiceNow operational use, ITSM workflows, validation, traceability, documentation, stakeholder collaboration
 
-- Shopify integrations
-- customer/contact ingestion
-- marketing-event foundations
-- segmentation
-- consent-aware workflows
-- email infrastructure
-- Supabase/PostgreSQL data models
-- admin tooling
-- document and process automation
+**Development:** Swift, JavaScript/TypeScript, Python, Java, C, web development, Linux, self-hosted systems
 
-This work is usually driven by removing repetitive manual steps, reducing errors and making operational state easier to trace.
+## Independent product engineering
 
-## Earlier software development
+Outside my professional roles, I build and ship independent software products including:
 
-Previous software-development work in Sweden included building a C-based command-line tool on macOS around an iOS SDK. That experience was an early introduction to SDK integration, platform tooling and working close to native development environments.
+- **DriveSplit**, a native iOS route and trip-cost product
+- **PinShift**, a macOS developer utility for authorized iPhone location testing
+- **Illa del Bosc Pàdel**, a cross-platform community court-reservation system
+- **Neon Swipe**, a consumer photo-cleanup product
+- private automation and internal tooling built with n8n, APIs and AI-assisted workflows
 
-## Technologies
-
-**Languages:** Swift, TypeScript, JavaScript, Python, Java, Rust, C
-
-**Apple:** SwiftUI, SwiftData, MapKit, HealthKit, ActivityKit, AVFoundation, Keychain, XCTest
-
-**Web:** React, Next.js, Vite, Tailwind CSS, Astro
-
-**Backend & data:** Supabase, PostgreSQL, REST APIs, webhooks
-
-**Automation:** n8n, AI agents, workflow orchestration, structured generation
-
-**Infrastructure & delivery:** GitHub Actions, Cloudflare Pages/Workers, Tauri, macOS signing/notarization, Azure
-
-**Platforms:** GitHub, Shopify, ServiceNow, Xcode, VS Code
-
-[Portfolio](README.md) · [Projects](PROJECTS.md) · [Case studies](CASE_STUDIES.md) · [Current focus](NOW.md)
+[Portfolio website](https://rasmuslantz.github.io/cv/) · [Projects](projects.html) · [Case studies](case-studies.html) · [Automation](automation.html)
