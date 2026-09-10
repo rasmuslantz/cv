@@ -1,81 +1,96 @@
 # Project Index
 
-A compact overview of selected products, experiments and engineering projects. Most active product source repositories are private, so this page focuses on what each project solves and the engineering areas explored.
+A compact overview of selected products and engineering systems. Most active product source repositories are private, so this page focuses on what each project solves and the engineering work behind it.
 
 | Project | Status | Area | Main technologies |
 | --- | --- | --- | --- |
 | **DriveSplit** | Active | Native iOS / mobility | Swift, SwiftUI, SwiftData, MapKit, ActivityKit, XCTest |
-| **PinShift** | Active | macOS developer tooling | TypeScript, React, Tauri, Rust, Python, Astro, GitHub Actions |
-| **WalkMates** | Active / educational | Software testing / Java | Java 21, Spring Boot, JUnit 5, Mockito, JaCoCo, PIT |
-| **HT** | Development / experiment | Health & wearable platform | Swift, SwiftUI, HealthKit, SwiftData, wearable SDK integration |
-| **Casa Puffy Marketing** | Private internal project | Ecommerce automation | Next.js, TypeScript, Supabase, PostgreSQL, Shopify, Resend |
+| **PinShift** | Active | macOS developer tooling | TypeScript, React, Tauri, Rust, Python, GitHub Actions |
+| **Illa del Bosc Pàdel** | Active / private | Community booking platform | Expo, React Native, TypeScript, Supabase, Postgres, RLS |
+| **Neon Swipe** | Shipped / maintenance | Consumer mobile product | Mobile UX, HTML, CSS, JavaScript, bilingual web |
+| **Automation systems** | Ongoing | Workflow automation | n8n, REST APIs, webhooks, JSON, JavaScript, Python, AI workflows |
+| **Casa Puffy systems** | Production / internal | Ecommerce automation | Shopify, APIs, webhooks, internal tooling, AI-assisted support |
 | **BeMyV** | Shipped / maintenance | Consumer iOS app | Swift, iOS, StoreKit, XCTest |
-| **Daily Frame** | Paused experiment | Local-first iOS media | Swift, SwiftUI, AVFoundation, LocalAuthentication, XCTest |
-| **Invitely / Invites** | Paused experiment | Native iOS product | Swift, SwiftUI, local/remote service abstractions, QR/link sharing |
-| **Neon Swipe** | Maintenance mode | Consumer mobile product / web | HTML, CSS, JavaScript, bilingual product frontend |
-| **Aurelia** | Prototype | AI product concept / frontend | React, TypeScript, Vite, Tailwind CSS, Framer Motion |
-| **n8n Git Automation** | Ongoing tooling | Developer automation | n8n, GitHub, webhooks, APIs, AI-assisted workflows |
+| **Daily Frame** | Paused | Local-first iOS media | Swift, SwiftUI, AVFoundation, LocalAuthentication |
+| **Invitely** | Paused | Native iOS product | Swift, SwiftUI, QR/link sharing, publishing abstractions |
+| **Aurelia** | Archived / abandoned | Earlier AI product concept | React, TypeScript, Vite, Tailwind CSS, Framer Motion |
 
 ## DriveSplit
 
-A native iPhone app for route planning, estimating fuel cost and splitting real journey expenses between passengers. The engineering work covers routing, persistent vehicle/trip state, location handling, Live Activities, localized number formats and deterministic cost calculations.
+A native iPhone app for route planning, estimating fuel cost and splitting real journey expenses between passengers. The engineering covers routing, persistent vehicle/trip state, location handling, Live Activities, localized number formats and deterministic cost calculations.
 
 Product: [drivesplit.pages.dev](https://drivesplit.pages.dev)
 
 ## PinShift
 
-A local-first desktop utility that coordinates Apple's developer-location services on an authorized iPhone. It combines a Tauri/React frontend, Rust native layer and Python device bridge with strict release, security and device-state boundaries.
+A local-first macOS utility that coordinates Apple's developer-location capabilities on an authorized iPhone. It combines a React/TypeScript frontend, Tauri/Rust native boundary and Python device bridge with explicit device-state, security and release boundaries.
 
 Product: [pinshift.pages.dev](https://pinshift.pages.dev)
 
-Public architecture/support: [github.com/rasmuslantz/PinShift-Support](https://github.com/rasmuslantz/PinShift-Support)
+Public architecture: [github.com/rasmuslantz/PinShift-Support](https://github.com/rasmuslantz/PinShift-Support)
 
-## WalkMates
+## Illa del Bosc Pàdel
 
-A deliberately testable Spring Boot system built for software-testing coursework. The project covers specification-based testing, structural coverage, mutation testing, mocks, CI evidence and testing AI-assisted behavior.
+A private cross-platform reservation system for residents of a real residential community.
 
-It is designed so the domain has clean boundaries and explicit testing seams rather than only toy functions created for individual exercises.
+The app includes:
 
-Repository: [github.com/rasmuslantz/walkmates-test](https://github.com/rasmuslantz/walkmates-test)
+- live court availability
+- bookings and cancellations
+- open matches / looking-for-players flows
+- invite-only resident access
+- Catalan, Spanish and English foundations
+- community rules and schedules
+- admin tools for closures, invites, content and booking policy
 
-## HT
-
-A native health and smartband experiment centered on Apple Health as the durable data store. It explores HealthKit authorization, wearable integration, local caching, explainable wellness scoring and privacy-first health-data architecture.
-
-## Casa Puffy Marketing
-
-An internal marketing platform designed around a real ecommerce environment. It explores contact ingestion, Shopify event/webhook handling, consent-aware tracking, Supabase/PostgreSQL data modeling, email infrastructure, authentication and audit logging.
-
-## BeMyV
-
-A shipped native iOS entertainment product built in Swift. The project includes StoreKit monetization, application testing and the full process of taking an independent consumer app from development to release.
-
-The launch reached more than 800 organic downloads on its first day and entered the free Entertainment category rankings in both Spain and the United States. The implementation repository remains private.
-
-## Daily Frame
-
-A privacy-first native iOS memory experiment combining daily selfies, one-second video, journaling and offline memories. Its strongest engineering areas include actor-based local storage, schema migrations, file protection, AVFoundation and atomic backup/restore.
-
-## Invitely / Invites
-
-A native iOS invitation-creation experiment with templates, themes, reveal animations, QR/link sharing, multi-step creation, reusable design-system primitives and separate storage/publishing service layers.
+The implementation uses Expo, React Native, TypeScript and Expo Router, with Supabase Auth, Postgres and Row Level Security as the backend foundation.
 
 ## Neon Swipe
 
-A consumer photo-cleanup concept built around one-action-at-a-time review: swipe to keep or delete, sort by media type, track progress and safely undo decisions. The public repository contains its bilingual product website and architecture notes.
+A consumer photo-cleanup product built around one-action-at-a-time review: swipe to keep or remove, filter by media type, track progress and safely undo decisions.
 
-Repository: [github.com/rasmuslantz/NeonSwipe](https://github.com/rasmuslantz/NeonSwipe)
+Public repository: [github.com/rasmuslantz/NeonSwipe](https://github.com/rasmuslantz/NeonSwipe)
+
+## Automation systems
+
+I build operational automation around n8n, APIs, webhooks and structured data. The emphasis is on reliable workflows rather than activity for activity's sake.
+
+Typical patterns include:
+
+- AI-assisted support routing and draft generation
+- Shopify and ecommerce operations
+- document and delivery-note workflows
+- repository and GitHub automation
+- change-aware backups
+- structured AI generation with validation
+- internal dashboards and small operational tools
+
+[See the visual automation page](automation.html)
+
+## Casa Puffy systems
+
+Automation and internal tooling for a Shopify business, covering support, operations, content, backend services and integrations. Work includes AI-assisted support workflows, routing, escalation logic, APIs, webhooks and internal dashboards.
+
+## BeMyV
+
+A shipped native iOS entertainment product including StoreKit monetization, testing and the full independent app-release process.
+
+## Daily Frame
+
+A paused privacy-first iOS memory experiment exploring local storage, AVFoundation, schema migrations, file protection and backup/restore.
+
+## Invitely
+
+A paused native iOS invitation-creation experiment with templates, themes, reveal animations, QR/link sharing and reusable service abstractions.
 
 ## Aurelia
 
-An AI-personalized jewelry discovery concept used to explore premium consumer UX, bilingual interfaces and AI positioning without making the product feel like a technical demo.
+**Archived / abandoned.** An earlier AI-personalized jewelry discovery experiment built with React and TypeScript. It is retained only as past product exploration and is not an active project.
 
-Repository: [github.com/rasmuslantz/Aurelia](https://github.com/rasmuslantz/Aurelia)
+## Academic work
 
-## Automation work
-
-Across projects I also build automation around GitHub, n8n, APIs and AI agents. The aim is not to manufacture activity, but to make real engineering work easier to trace: change detection, repository backups, structured PR generation, validation, code-review assistance and webhook-driven workflows.
+University coursework is intentionally kept separate from independent projects. For example, **WalkMates** is software-testing coursework and is not presented here as one of my own standalone products.
 
 ---
 
-**Private source does not mean invisible work.** Architecture, product decisions, testing, release engineering and technical trade-offs can still be discussed without exposing proprietary repositories.
+**Private source does not mean invisible work.** Architecture, product decisions, testing, release engineering and technical trade-offs can still be documented without exposing proprietary implementation.
