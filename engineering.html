@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Engineering approach of Rasmus Lantz across native apps, automation, data, testing and release systems.">
+  <title>Engineering | Rasmus Lantz</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="extras.css">
+</head>
+<body class="inner-page"><div class="page-progress" aria-hidden="true"></div>
+<header class="site-header"><div class="shell nav-wrap"><a class="wordmark" href="./">RL</a><nav class="nav"><a href="./">Home</a><a href="projects.html">Projects</a><a class="active" href="engineering.html">Engineering</a><a href="experience.html">Experience</a><a href="automation.html">Automation</a></nav><a class="nav-cta" href="contact.html">Contact ↗</a></div></header>
+<main>
+<section class="page-hero shell reveal"><p class="eyebrow">Engineering</p><h1>How I turn a product into a system.</h1><p>I like interfaces that feel simple because the complexity has been handled underneath. My work usually spans product state, data, integrations, testing, failure handling and release rather than stopping at the visible screen.</p></section>
+
+<section class="section shell engineering-map">
+  <div class="section-heading reveal"><p class="eyebrow">System shape</p><h2>Separate what changes for different reasons.</h2><p>A recurring pattern across my projects is keeping presentation, product state, services and persistence independent enough to test and replace without rewriting the whole product.</p></div>
+  <div class="system-stack reveal">
+    <div class="system-layer"><span>01</span><div><strong>Experience</strong><small>SwiftUI · React · React Native</small></div><p>Navigation, user feedback, accessibility, responsive layouts and explicit product states.</p></div>
+    <div class="system-connector"><i></i><em>events + state</em></div>
+    <div class="system-layer"><span>02</span><div><strong>Domain</strong><small>calculations · permissions · workflows</small></div><p>The rules that should remain understandable and testable without depending on a particular screen.</p></div>
+    <div class="system-connector"><i></i><em>typed boundaries</em></div>
+    <div class="system-layer"><span>03</span><div><strong>Services</strong><small>MapKit · APIs · device bridge · n8n</small></div><p>External systems are wrapped behind smaller interfaces so failure and compatibility can be handled explicitly.</p></div>
+    <div class="system-connector"><i></i><em>validated data</em></div>
+    <div class="system-layer"><span>04</span><div><strong>State & data</strong><small>SwiftData · Postgres · local storage</small></div><p>Persistent state, transient session state and sensitive values are treated differently instead of becoming one global store.</p></div>
+  </div>
+</section>
+
+<section class="section section-contrast">
+  <div class="shell"><div class="section-heading reveal"><p class="eyebrow">Reliability</p><h2>Production work starts where the happy path ends.</h2></div>
+    <div class="engineering-grid">
+      <article class="engineering-card reveal"><span>01</span><h3>Testing</h3><p>Critical calculations, persistence, booking rules, migrations and failure states get explicit automated coverage where mistakes would be expensive or hard to notice.</p><div class="mono-note">XCTest · Jest · validation · regression</div></article>
+      <article class="engineering-card reveal"><span>02</span><h3>Failure states</h3><p>Disconnected devices, invalid routes, failed API calls, bad payloads and permission problems should produce a useful state rather than disappearing behind a generic error.</p><div class="mono-note">detect → classify → surface → recover</div></article>
+      <article class="engineering-card reveal"><span>03</span><h3>Data integrity</h3><p>Database rules and application checks reinforce each other. For multi-user systems, authorization belongs close to the data, not only in the UI.</p><div class="mono-note">Postgres · RLS · schemas · migrations</div></article>
+      <article class="engineering-card reveal"><span>04</span><h3>Release engineering</h3><p>CI, signing, notarization, updater trust and reproducible release steps are part of the product whenever software has to leave my machine reliably.</p><div class="mono-note">GitHub Actions · signing · notarization</div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section shell">
+  <div class="section-heading reveal"><p class="eyebrow">Different products, different boundaries</p><h2>I do not force every project into the same stack.</h2></div>
+  <div class="architecture-cases">
+    <article class="architecture-case reveal"><header><span>DriveSplit</span><em>Native iOS</em></header><div class="arch-flow"><b>SwiftUI</b><i>→</i><b>Trip state</b><i>→</i><b>MapKit + GPS</b><i>→</i><b>SwiftData</b></div><p>Native APIs make sense because location, routes, Live Activities and iPhone interaction are central to the product.</p></article>
+    <article class="architecture-case reveal"><header><span>PinShift</span><em>Desktop + device</em></header><div class="arch-flow"><b>React</b><i>→</i><b>Tauri / Rust</b><i>→</i><b>Python bridge</b><i>→</i><b>iPhone</b></div><p>Multiple languages are useful here because each layer has a different responsibility and platform boundary.</p></article>
+    <article class="architecture-case reveal"><header><span>Illa del Bosc Pàdel</span><em>Cross-platform</em></header><div class="arch-flow"><b>Expo</b><i>→</i><b>Query + forms</b><i>→</i><b>Supabase</b><i>→</i><b>Postgres / RLS</b></div><p>One cross-platform client is a better trade-off when the product needs iOS, Android and web with the same booking rules.</p></article>
+    <article class="architecture-case reveal"><header><span>Automation</span><em>Operational systems</em></header><div class="arch-flow"><b>Event</b><i>→</i><b>n8n</b><i>→</i><b>Validate</b><i>→</i><b>API / action</b></div><p>Low-code orchestration is useful when it makes a real process easier to inspect and change, with code used where deterministic logic is clearer.</p></article>
+  </div>
+</section>
+
+<section class="section shell decision-section">
+  <div class="section-heading reveal"><p class="eyebrow">Decision framework</p><h2>What I optimize for.</h2></div>
+  <div class="decision-list">
+    <article class="reveal"><span>01</span><h3>Clarity before cleverness</h3><p>A boring architecture that another person can understand beats a clever abstraction that hides where state lives.</p></article>
+    <article class="reveal"><span>02</span><h3>Native when the platform matters</h3><p>Use native APIs when they are the product advantage. Use cross-platform when the business problem benefits more from shared delivery.</p></article>
+    <article class="reveal"><span>03</span><h3>Validate at boundaries</h3><p>User input, AI output, webhook payloads, API responses and database writes are all trust boundaries.</p></article>
+    <article class="reveal"><span>04</span><h3>Automate only repeatable decisions</h3><p>Automation is strongest when the rules are explicit. High-impact ambiguity deserves a human checkpoint.</p></article>
+    <article class="reveal"><span>05</span><h3>Release is part of engineering</h3><p>A feature that cannot be shipped, updated, diagnosed or rolled forward safely is not finished.</p></article>
+  </div>
+</section>
+
+<section class="contact shell reveal"><p class="eyebrow">See it applied</p><h2>The architecture is easier to judge in context.</h2><p>The case studies connect these principles to actual product constraints and implementation decisions.</p><div class="hero-actions"><a class="button button-primary" href="case-studies.html">Case studies</a><a class="button button-secondary" href="results.html">Execution & results</a></div></section>
+</main>
+<footer class="site-footer"><div class="shell footer-inner"><span>Rasmus Lantz</span><span id="year"></span><a href="contact.html">Contact →</a></div></footer><script src="script.js" defer></script></body></html>
